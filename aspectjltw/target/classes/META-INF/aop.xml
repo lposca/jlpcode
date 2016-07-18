@@ -1,0 +1,14 @@
+<aspectj>
+    <aspects>
+        <aspect name="jpl.code.examples.aspject.PrinterAspect"/>
+                
+        
+    </aspects>
+
+    <weaver options="-verbose">
+        
+        <include within="jpl.code.examples.aspject.PrinterAspect"/>
+        <include within="jpl.code.examples.aspject.Printer"/>
+    </weaver>
+</aspectj>
+
