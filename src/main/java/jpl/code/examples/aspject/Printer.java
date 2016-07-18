@@ -18,14 +18,14 @@ public class Printer {
 	
 	public void print()
 	{
-		System.out.println("print() method  :" +  getNumber());
+		System.out.println("Printer.print() -->  :" +  getNumber());
 	}
 	
 	
 	private Integer getNumber()
 	{
 		int nextInt = random.nextInt(10);
-		System.out.println("getNumber() generates number  " + nextInt );
+		System.out.println("Printer.getNumber() generates number  " + nextInt );
 		return nextInt;
 		
 	}

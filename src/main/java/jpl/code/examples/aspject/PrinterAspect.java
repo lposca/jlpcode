@@ -11,14 +11,14 @@ public class PrinterAspect {
 	@Before("execution (* jpl.code.examples.aspject.Printer.getNumber())")
 	public void beforeGetNumber(JoinPoint joinPoint) {
 		
-		System.out.println("**[Before method] " + joinPoint.getSignature().getName() );
+		System.out.printf("**[Before advice from method]'%s'%n  ", joinPoint);
 	}
 	
 	
 	@AfterReturning(value="execution (* jpl.code.examples.aspject.Printer.getNumber())", returning="number")
 	public void afterReturningGetNumber(JoinPoint joinPoint, int number) {
 		
-		System.out.println("**[after method] " + joinPoint.getSignature().getName() +" method returns " + number );
+		System.out.println("**[after advice from method] " + joinPoint +" method returns " + number );
 	}
 	
 }
